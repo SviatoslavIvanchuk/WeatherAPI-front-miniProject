@@ -1,0 +1,64 @@
+@media screen and (max-width: 920px) {
+    .mainBlock {flex-direction: column}
+    .menu {
+        height: 70px;
+        width: 250px;
+    }
+    .msg {
+        top: 50vh;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .weatherBlock {width: 250px}
+    .forecastBlock {width: 250px}
+    .todayBlock {width: 250px}
+    .forecastBlock {
+        flex-direction: column;
+    }
+    .menu {width: 500px}
+}
+
+@media screen and (max-width: 570px){
+    .msg {position: fixed; bottom: 10vh}
+    .content, .menu, .mainBlock, .searchBlock {width: 250px}
+    .searchBlock input, button {
+        width: auto;
+    }
+    .searchBlock button {
+        left: 180px;
+        width: 60px;
+        padding: 5px;
+    }
+    .forecastToday, .airConditionsBlock, .baseInfo {
+        min-width: 250px;
+        min-height: 150px;
+    }
+    .baseInfo {
+        height: 250px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .cityNameAndTemperature {
+        height: 100px;
+    }
+    .forecastToday, .airConditionsBlock, .baseInfo {
+        width: 250px;
+        overflow: hidden;
+        overflow-x: auto;
+        box-sizing: initial;
+    }
+    .iconWeather img {width: 120px;}
+    .airConditions .data {width: 50%}
+
+    ::-webkit-scrollbar {width: 12px; overflow: hidden}
+    ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey;
+        border-bottom-right-radius: 20px; border-bottom-left-radius: 20px}
+    ::-webkit-scrollbar-thumb {background: #161b33;
+        border-bottom-right-radius: 20px; border-bottom-left-radius: 20px}
+    ::-webkit-scrollbar-thumb:hover {background: #161b33;}
+
+
+
+}

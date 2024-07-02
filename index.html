@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    
+<div class="msg">
+    <div class="container">
+        <div class="circle-border"></div>
+        <div class="circle">
+            <div class="error"></div>
+        </div>
+    </div>
+    <div class="msgError"></div>
+    <button id="msgButton" class="msgButton" onclick="close()">Close</button>
+</div>
+
+<div class="mainBlock">
+
+    <div class="content">
+        <div class="weatherBlock">
+            <div class="searchBlock">
+                <form>
+                    <label for='cityname'></label>
+                    <input id='cityname' type="text" placeholder="Search for cities" autofocus>
+                    <button type="submit" onclick="">Search</button>
+                </form>
+            </div>
+            <div class="forecastBlock">
+                <div class="todayBlock">
+                    <div class="baseInfo">
+
+                    </div>
+                    <div class="forecastToday">
+
+                    </div>
+                    <div class="airConditionsBlock">
+
+                    </div>
+                </div>
+                <div class="forecastFiveDays">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

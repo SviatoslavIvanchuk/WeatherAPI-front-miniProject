@@ -1,0 +1,303 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    margin: 0;
+    background: #474973;
+}
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 6px;}
+::-webkit-scrollbar-thumb {background: #161b33; border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #161b33;}
+
+.mainBlock {
+    display: flex;
+    background: #0d0c1d;
+    border-radius: 20px;
+    padding: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.menu {
+    display: flex;
+    width: 70px;
+    background: #161b33;
+    border-radius: 20px;
+}
+.content {
+    display: flex;
+}
+
+/*------------------------------Weather--------------------------*/
+
+.weatherBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder {color: silver}
+.searchBlock {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+.searchBlock input, button {
+    width: 460px;
+    height: 20px;
+    background: #161b33;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    color: snow;
+}
+.searchBlock button {
+    width: 100px;
+    height: 100%;
+    border-top-left-radius: 0;
+    position: absolute;
+    left: 400px;
+    background: #474973;
+}
+button:active {background: #161b33}
+
+.forecastBlock {
+    display: flex;
+    row-gap: 20px;
+    column-gap: 20px
+}
+
+.todayBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.forecastToday, .airConditionsBlock, .baseInfo {
+    width: 500px;
+    height: 150px;
+    background: #161b33;
+    border-radius: 20px;
+}
+.baseInfo {background: none; display: flex; justify-content: space-between}
+
+.forecastFiveDays {
+    position: relative;
+    width: 250px;
+    background: #161b33;
+    border-radius: 20px;
+}
+
+/*------------------------------JS Styles--------------------------*/
+
+.baseInfo {
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.cityNameAndTemperature {
+    position: relative;
+    color: snow;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.cityNameAndTemperature h2 {margin: 0; font-size: 35px}
+.cityNameAndTemperature sup {color: snow; background: orange; padding: 2px; font-size: 12px; border-radius: 20%}
+.cityNameAndTemperature span {font-size: 14px; color: silver}
+.cityNameAndTemperature .cityTemperature {display: flex; position: absolute; font-size: 50px; bottom: 5px; }
+.cityNameAndTemperature .cityTemperature .grad {
+    margin: 6px 4px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid snow;
+    background: none;
+    border-radius: 50%;
+}
+.iconWeather img {width: 150px;}
+
+.forecastToday {
+
+}
+.forecastTodayScroll {
+    padding: 5px;
+    height: 100%;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.forecastTodayScroll .timeOfDay {
+    height: 80%;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.forecastToday span {font-size: 10px; color: silver}
+.forecastToday img {width: 70%}
+.forecastToday h3 {font-size: 18px; color: snow; margin: 0; display: flex}
+.forecastToday h3 .grad {width: 4px; height: 4px; border: 1px solid snow; background: none; border-radius: 50%; margin: 0 2px}
+
+.airConditions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 10%;
+}
+
+.airConditions .data {width: 40%}
+.airConditions .data  span {font-size: 12px; color: silver}
+.airConditions .data .grad {width: 4px; height: 4px; border: 2px solid snow; background: none; border-radius: 50%; margin: 0 2px}
+.airConditions .data h3 {margin: 0; font-size: 24px; color: snow; display: flex}
+
+
+.forecastFiveDays {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.forecastFiveDays h3 {font-size: 14px; color: silver;}
+.forecastFiveDays .dayOfWeek {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid grey;
+}
+.forecastFiveDays .nameOfWeek h4 {
+    margin: 3px;
+    font-size: 14px;
+    color: snow;
+}
+.forecastFiveDays .weatherNameAndTemperature {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.forecastFiveDays .weatherNameAndTemperature .icon  img{width: 50px;}
+.forecastFiveDays .weatherNameAndTemperature h4{ margin: 5px; font-size: 18px; color: snow}
+.forecastFiveDays .weatherNameAndTemperature span{color: silver}
+
+
+.msg {
+    display: none;
+    top: 15vh;
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 26;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.05);
+}
+.msg .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+
+}
+.msg .circle,
+.msg .circle-border {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.msg .circle {
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    background: white;
+    transform: scale(1);
+    animation: success-anim 700ms ease;
+}
+.msg .circle-border {
+    z-index: 0;
+    position: absolute;
+    transform: scale(1.1);
+    animation: circle-anim 400ms ease;
+    background: red;
+}
+@keyframes success-anim {
+    0% {
+        transform: scale(0);
+    }
+    30% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes circle-anim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.msg .error::before,
+.msg .error::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: red;
+    position: absolute;
+}
+.msg .error::before {
+    width: 40px;
+    top: 48%;
+    left: 16%;
+    transform: rotate(50deg);
+}
+.msg .error::after {
+    width: 40px;
+    top: 48%;
+    left: 16%;
+    transform: rotate(-50deg);
+}
+.msg .msgError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.msg .msgError h2{font-size: 40px; color: red; margin: 0}
+.msg .msgError span{font-size: 16px; color: red}
+.msgButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 16px;
+    padding: 4px;
+    height: 30px;
+    background: none;
+    border: 1px solid red;
+    color: red;
+}
+.msgButton:hover {color: snow; background: red}
